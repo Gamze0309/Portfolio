@@ -6,14 +6,15 @@ export default {
     fontFamily: {
       "primary-family": ["Amaranth", "sans-serif"],
       serif: ["Merriweather", "serif"],
+      "logo-family": ["Allura", "cursive"],
     },
     extend: {
       colors: {
         orange: "#F0A04B",
         green: "#B1C29E",
         yellow: "#FADA7A",
-        "dark-text": "#3B3838",
-        "light-text": "#F0E9E9",
+        dark: "#3B3838",
+        light: "#fce7c8",
       },
     },
   },

@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Amaranth:wght@400;700&family=Merriweather:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: "primary-family", sans-serif;
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 0.8px currentColor;
+  }
+  .text-shadow-strong {
+    text-shadow: 0 0 0.5px currentColor, 0 0 1px currentColor,
+      0 0 1.5px currentColor;
+  }
+  .text-shadow-bottom {
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
 }

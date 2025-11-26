@@ -1,10 +1,16 @@
 import "./App.css";
-import FirstPage from "./pages/FirstPage";
+import Navbar from "./components/Navbar";
+import Introduction from "./components/Introduction";
+import Information from "./components/Information";
 
 function App() {
   return (
     <>
-      <FirstPage />
+      <Navbar />
+      <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory">
+        <Introduction />
+        <Information />
+      </div>
     </>
   );
 }
