@@ -22,11 +22,11 @@ function Introduction() {
       <div className="hidden md:flex w-1/3 h-full bg-yellow items-center justify-center">
         <Lottie animationData={animationData} loop />
       </div>
-      <div className="w-full md:w-2/3 h-full bg-light flex flex-col justify-center px-6 md:px-12 gap-6 overflow-hidden">
+      <div className="w-full md:w-2/3 h-full bg-light flex flex-col justify-center px-2 sm:px-4 lg:px-12 gap-6 overflow-hidden">
         <p className="text-green font-bold text-lg md:text-xl">
           Hi, I am Gamze 👋
         </p>
-        <h1 className="text-dark font-bold text-3xl md:text-5xl leading-tight">
+        <h1 className="text-dark font-bold text-lg md:text-5xl sm:text-2xl leading-tight">
           Software engineer building scalable, maintainable applications focused
           on clean architecture and high‑reliability systems.
         </h1>
