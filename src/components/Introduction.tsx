@@ -17,12 +17,12 @@ function Introduction() {
   return (
     <div
       id="introduction"
-      className="flex h-screen w-full snap-start font-primary-family"
+      className="flex flex-col md:flex-row min-h-screen md:h-screen w-full md:snap-start font-primary-family"
     >
       <div className="hidden md:flex w-1/3 h-full bg-yellow items-center justify-center">
         <Lottie animationData={animationData} loop />
       </div>
-      <div className="w-full md:w-2/3 h-full bg-light flex flex-col justify-center px-2 sm:px-4 lg:px-12 gap-6 overflow-hidden">
+      <div className="w-full md:w-2/3 flex-1 md:h-full bg-light flex flex-col justify-center px-6 py-20 md:py-0 sm:px-4 lg:px-12 gap-6 md:overflow-hidden">
         <p className="text-green font-bold text-lg md:text-xl">
           Hi, I am Gamze 👋
         </p>

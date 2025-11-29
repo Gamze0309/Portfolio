@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="h-screen w-full overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
+      <div className="h-screen w-full overflow-y-scroll overflow-x-hidden md:snap-y md:snap-mandatory scroll-smooth">
         <Introduction />
         <Information />
       </div>
