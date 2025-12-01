@@ -1,16 +1,21 @@
+import { SECTION_IDS } from "../constants";
 import { experiences } from "../data/experiences";
 
 const Experience = () => {
   return (
-    <div id="experience" className="section-container bg-light">
-      <div className="container md:px-20">
-        <h2 className="section-title mb-12">
+    <div id={SECTION_IDS.EXPERIENCE} className="section-container bg-light">
+      <div className="container px-6 md:px-16">
+        <h2 className="section-title">
           My Career Journey{" "}
           <span role="img" aria-label="rocket">
             🚀
           </span>
         </h2>
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <p className="section-subtitle">
+          Selected work that reflects my focus on clarity, performance, and
+          thoughtful user experience.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {experiences.map((exp) => (
             <div key={exp.id} className="card-base">
               <h3 className="card-title">{exp.role}</h3>

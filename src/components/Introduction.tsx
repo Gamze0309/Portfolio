@@ -1,26 +1,31 @@
 import { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import animationData from "../assets/developer.json";
+import { ROLE_ROTATION_INTERVAL, SECTION_IDS } from "../constants";
 
 const ROLES = ["UI Enthusiast", "Problem Solver", "Developer"];
 
-function Introduction() {
+const Introduction = () => {
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % ROLES.length);
-    }, 2000);
+    }, ROLE_ROTATION_INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      id="introduction"
+      id={SECTION_IDS.INTRODUCTION}
       className="flex flex-col md:flex-row min-h-screen md:h-screen w-full md:snap-start font-primary-family"
     >
       <div className="flex w-full md:w-1/3 h-64 md:h-full bg-yellow items-center justify-center mt-20 md:mt-0">
-        <Lottie animationData={animationData} loop />
+        <Lottie
+          animationData={animationData}
+          loop
+          aria-label="developer-animation"
+        />
       </div>
       <div className="w-full md:w-2/3 flex-1 md:h-full bg-light flex flex-col justify-center px-6 sm:px-4 lg:px-12 gap-6 md:overflow-hidden md:pt-12">
         <p className="text-green font-bold text-lg md:text-xl">
@@ -40,6 +45,6 @@ function Introduction() {
       </div>
     </div>
   );
-}
+};
 
 export default Introduction;

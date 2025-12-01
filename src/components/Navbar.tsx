@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
+import type { MenuItem } from "../types";
+import { NAVBAR_SCROLL_OFFSET, SECTION_IDS } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuItems = [
-    { id: "information", label: "Information" },
-    { id: "experience", label: "Experience" },
-    { id: "projects", label: "Projects" },
-    { id: "contact", label: "Contact" },
+  const menuItems: MenuItem[] = [
+    { id: SECTION_IDS.INFORMATION, label: "Information" },
+    { id: SECTION_IDS.EXPERIENCE, label: "Experience" },
+    { id: SECTION_IDS.PROJECTS, label: "Projects" },
+    { id: SECTION_IDS.CONTACT, label: "Contact" },
   ];
 
   useEffect(() => {
     const container = document.getElementById("scroll-container");
     if (!container) return;
 
-    const sections = ["information", "experience", "projects", "contact"];
-    const navbarOffset = 150;
+    const sections = menuItems.map((item) => item.id);
 
     const onScroll = () => {
-      const scrollPos = container.scrollTop + navbarOffset;
+      const scrollPos = container.scrollTop + NAVBAR_SCROLL_OFFSET;
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el && el.offsetTop <= scrollPos) {
@@ -44,14 +45,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full py-6 lg:px-16 px-12 flex justify-between items-center z-50 bg-light shadow-md md:bg-transparent md:shadow-none">
+    <nav className="fixed top-0 left-0 w-full py-6 px-6 md:px-16 flex justify-between items-center z-50 bg-light shadow-md md:bg-transparent md:shadow-none">
       <div
         className={`text-4xl font-extrabold cursor-pointer font-logo-family text-stroke text-shadow-bottom transition-colors text-green ${
-          active === "information" || active === "projects"
+          active === SECTION_IDS.INFORMATION || active === SECTION_IDS.PROJECTS
             ? "md:text-light"
             : "md:text-green"
         }`}
-        onClick={() => scrollToSection("introduction")}
+        onClick={() => scrollToSection(SECTION_IDS.INTRODUCTION)}
       >
         GAMZE
       </div>

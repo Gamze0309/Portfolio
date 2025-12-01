@@ -1,6 +1,11 @@
+import { SECTION_IDS } from "../constants";
+
 const Information = () => {
   return (
-    <div id="information" className="section-container bg-green justify-center">
+    <div
+      id={SECTION_IDS.INFORMATION}
+      className="section-container bg-green justify-center"
+    >
       <div className="info-decoration-circle top-32 left-10 w-32 h-32 bg-light animate-pulse"></div>
       <div className="info-decoration-circle bottom-10 right-10 w-48 h-48 bg-yellow"></div>
       <div className="info-decoration-star top-24 right-1/4 text-3xl text-yellow opacity-80 animate-bounce">
@@ -13,7 +18,7 @@ const Information = () => {
         ★
       </div>
 
-      <div className="container mx-auto px-4 md:px-16 relative z-10">
+      <div className="container mx-auto px-6 md:px-16 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
           <div className="flex-1 text-center md:text-right space-y-2 md:space-y-4">
             <h2 className="info-subsection-title">Who I Am</h2>

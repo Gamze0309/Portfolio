@@ -44,11 +44,11 @@
   }
 
   .card-base {
-    @apply bg-green/20 rounded-2xl p-6 shadow-sm border border-orange/30;
+    @apply bg-light/80 rounded-2xl p-6 shadow-sm border border-orange;
   }
 
   .card-hover {
-    @apply card-base hover:shadow-md transition-shadow;
+    @apply card-base hover:shadow-lg transition-shadow;
   }
 
   .section-title {

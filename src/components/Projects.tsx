@@ -1,10 +1,11 @@
 import CustomButton from "./CustomButton";
 import { projects } from "../data/projects";
+import { SECTION_IDS } from "../constants";
 
 const Projects = () => {
   return (
-    <div id="projects" className="section-container bg-green">
-      <div className="container px-6 md:px-20">
+    <div id={SECTION_IDS.PROJECTS} className="section-container bg-green">
+      <div className="container px-6 md:px-16">
         <h2 className="section-title">My Projects</h2>
         <p className="section-subtitle">
           Selected work that reflects my focus on clarity, performance, and
@@ -12,10 +13,10 @@ const Projects = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {projects.map((p) => (
-            <div key={p.id} className="group card-hover border-orange/80">
+            <div key={p.id} className="group card-hover">
               <div className="flex items-start justify-between">
                 <h3 className="card-title">{p.title}</h3>
-                <span className="text-yellow text-sm font-bold">★</span>
+                <span className="text-orange text-sm font-bold">★</span>
               </div>
               <p className="card-text mt-3">{p.description}</p>
               <div className="flex flex-wrap gap-2 mt-4 font-content-family mb-6">

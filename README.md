@@ -1,16 +1,75 @@
-# React + Vite
+# Gamze Ercan - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my work as a Software Engineer, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop
+- **Smooth Animations**: Lottie animations and scroll-based effects
+- **TypeScript**: Type-safe codebase for better maintainability
+- **Modern Stack**: React 19, Vite, Tailwind CSS 3.4
+- **Clean Architecture**: Well-organized components and utilities
+- **Accessibility**: ARIA labels and semantic HTML
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS, Custom CSS utilities
+- **Build Tool**: Vite
+- **Animations**: Lottie React
+- **Code Quality**: ESLint, TypeScript strict mode
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repository
+git clone https://github.com/Gamze0309/Portfolio.git
+
+# Navigate to project directory
+cd gamze-ercan-porfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/       # React components
+├── data/            # Static data (projects, experiences)
+├── types/           # TypeScript type definitions
+├── constants/       # Application constants
+├── assets/          # Images, animations
+└── index.css        # Global styles and utilities
+```
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 🎨 Design System
+
+The portfolio uses a consistent color palette:
+
+- **Primary**: #B1C29E (Green)
+- **Secondary**: #F0A04B (Orange)
+- **Accent**: #FADA7A (Yellow)
+- **Dark**: #3B3838
+- **Light**: #FCE7C8
+
+## 📧 Contact
+
+- **Email**: gamze@example.com
+- **LinkedIn**: [linkedin.com/in/gamze](https://linkedin.com/in/gamze)
+- **GitHub**: [github.com/Gamze0309](https://github.com/Gamze0309)
+
+---
+
+Built with ❤️ by Gamze Ercan
