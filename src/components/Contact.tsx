@@ -33,7 +33,7 @@ const Contact = () => {
     <div
       id="contact"
       ref={sectionRef}
-      className="min-h-screen md:h-screen w-full md:snap-start bg-yellow flex flex-col items-center relative py-20"
+      className="section-container bg-yellow py-20"
     >
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex justify-center">
@@ -45,25 +45,21 @@ const Contact = () => {
             className="w-32 h-32 lg:w-48 lg:h-48"
           />
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-dark mb-6 text-center font-primary-family">
-          Send me a message!
-        </h2>
-        <p className="text-dark/80 text-sm md:text-base text-center mb-10 max-w-2xl mx-auto font-primary-family">
+        <h2 className="section-title mb-6">Send me a message!</h2>
+        <p className="section-subtitle">
           I’d love to hear from you. Whether it’s a project idea, collaboration,
           or just a hello — feel free to reach out.
         </p>
         <div className="mx-auto md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-light/80 rounded-2xl p-6 shadow-sm border border-orange/30">
-            <h3 className="text-lg md:text-xl font-bold text-dark mb-3 font-primary-family">
-              Say hello from social media
-            </h3>
-            <p className="text-dark/80 text-sm md:text-base leading-relaxed mt-2 font-content-family">
+            <h3 className="card-title mb-3">Say hello from social media</h3>
+            <p className="card-text mt-2">
               LinkedIn:{" "}
               <a href="#" className="text-orange font-bold">
                 linkedin.com/in/gamze
               </a>
             </p>
-            <p className="text-dark/80 text-sm md:text-base leading-relaxed mt-2 font-content-family">
+            <p className="card-text mt-2">
               GitHub:{" "}
               <a href="#" className="text-orange font-bold">
                 github.com/Gamze0309
@@ -71,10 +67,8 @@ const Contact = () => {
             </p>
           </div>
           <div className="bg-light/80 rounded-2xl p-6 shadow-sm border border-orange/30">
-            <h3 className="text-lg md:text-xl font-bold text-dark mb-3 font-primary-family">
-              Send me an email
-            </h3>
-            <p className="text-dark/80 text-sm md:text-base leading-relaxed font-content-family mb-4">
+            <h3 className="card-title mb-3">Send me an email</h3>
+            <p className="card-text mb-4">
               Prefer quick contact? Drop me a line and I’ll reply soon.
             </p>
             <CustomButton text="Send Email" link="mailto:gamze@example.com" />

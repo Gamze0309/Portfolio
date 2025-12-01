@@ -4,6 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fce7c8;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #b1c29e;
+    border-radius: 10px;
+    border: 2px solid #fce7c8;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #b1c29e #fce7c8;
+  }
+}
+
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke: 0.8px currentColor;
@@ -14,5 +36,58 @@
   }
   .text-shadow-bottom {
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Reusable component classes */
+  .section-container {
+    @apply min-h-screen md:h-screen w-full md:snap-start flex flex-col items-center relative py-28;
+  }
+
+  .card-base {
+    @apply bg-green/20 rounded-2xl p-6 shadow-sm border border-orange/30;
+  }
+
+  .card-hover {
+    @apply card-base hover:shadow-md transition-shadow;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold text-dark mb-8 text-center font-primary-family;
+  }
+
+  .section-subtitle {
+    @apply text-dark/80 text-sm md:text-base text-center mb-10 max-w-2xl mx-auto font-primary-family;
+  }
+
+  .card-title {
+    @apply text-lg md:text-xl font-bold text-dark font-primary-family;
+  }
+
+  .card-text {
+    @apply text-dark/80 text-sm md:text-base leading-relaxed font-content-family;
+  }
+
+  .tag {
+    @apply bg-dark text-yellow text-xs md:text-sm tracking-wide px-3 py-1 rounded-md;
+  }
+
+  .info-decoration-circle {
+    @apply absolute rounded-full mix-blend-overlay filter blur-xl opacity-50;
+  }
+
+  .info-decoration-star {
+    @apply absolute select-none;
+  }
+
+  .info-subsection-title {
+    @apply text-xl sm:text-3xl font-bold text-dark mb-1 md:mb-2 font-primary-family;
+  }
+
+  .info-subsection-text {
+    @apply text-dark/90 text-sm md:text-lg leading-relaxed font-content-family;
+  }
+
+  .info-center-icon {
+    @apply flex-shrink-0 relative w-28 h-28 md:w-40 md:h-40 flex items-center justify-center drop-shadow-lg transform hover:scale-105 transition-transform duration-500;
   }
 }
