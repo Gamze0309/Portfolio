@@ -44,8 +44,21 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  const cvButton = (isMobile: boolean) => (
+    <a
+      href="/cv.pdf"
+      download="Gamze_Ercan_CV.pdf"
+      className={`bg-dark active:scale-95 transition-transform text-yellow rounded-lg font-bold hover:bg-orange hover:text-dark transition-colors duration-300 ${
+        isMobile ? "px-4 py-3 text-lg text-center" : "px-4 py-2 text-sm"
+      }`}
+      onClick={() => isMobile && setMenuOpen(false)}
+    >
+      📄 Download CV
+    </a>
+  );
+
   return (
-    <nav className="fixed top-0 left-0 w-full py-6 px-6 md:px-16 flex justify-between items-center z-50 bg-light shadow-md md:bg-transparent md:shadow-none">
+    <nav className="fixed top-0 left-0 w-full py-6 px-12 md:px-16 flex justify-between items-center z-50 bg-light shadow-md md:bg-transparent md:shadow-none">
       <div
         className={`text-4xl font-extrabold cursor-pointer font-logo-family text-stroke text-shadow-bottom transition-colors text-green ${
           active === SECTION_IDS.INFORMATION || active === SECTION_IDS.PROJECTS
@@ -58,18 +71,24 @@ const Navbar = () => {
       </div>
       <div className="flex gap-6 md:gap-8">
         {/* Desktop menu */}
-        <div className="hidden md:flex gap-6 md:gap-8">
+        <div className="hidden md:flex gap-6 md:gap-8 items-center">
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`text-sm md:text-lg text-dark hover:text-orange transition-colors ${
+              className={`text-sm md:text-lg text-dark ${
+                active === SECTION_IDS.INFORMATION ||
+                active === SECTION_IDS.PROJECTS
+                  ? "hover:text-light"
+                  : "hover:text-orange"
+              } transition-colors ${
                 active === item.id ? "border-b-2 border-orange" : ""
               }`}
             >
               {item.label}
             </button>
           ))}
+          {cvButton(false)}
         </div>
 
         {/* Mobile hamburger */}
@@ -110,6 +129,7 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            {cvButton(true)}
           </div>
         </div>
       )}
