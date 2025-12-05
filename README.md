@@ -26,7 +26,7 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 git clone https://github.com/Gamze0309/Gamze-Ercan-Portfolio.git
 
 # Navigate to project directory
-cd gamze-ercan-porfolio
+cd Gamze-Ercan-Portfolio
 
 # Install dependencies
 npm install
