@@ -46,8 +46,8 @@ const Navbar = () => {
 
   const cvButton = (isMobile: boolean) => (
     <a
-      href="/cv.pdf"
-      download="Gamze_Ercan_CV.pdf"
+      href="/GamzeErcanCv.pdf"
+      download="GamzeErcanCv.pdf"
       className={`bg-dark active:scale-95 transition-transform text-yellow rounded-lg font-bold hover:bg-orange hover:text-dark transition-colors duration-300 ${
         isMobile ? "px-4 py-3 text-lg text-center" : "px-4 py-2 text-sm"
       }`}
